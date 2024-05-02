@@ -1,23 +1,34 @@
+using magnus_backend;
 using magnus_backend.Interfaces;
-using magnus_backend.Models;
 using magnus_backend.Services;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//attempt to load the .ENV file
+try
+{
+    var path = Path.Combine(builder.Environment.ContentRootPath, ".env");
+    DotEnv.Load(path);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error loading .env file: {ex.Message}");
+}
+
+var connectionString = Environment.GetEnvironmentVariable("DB_CONN_STRING");
+
 //load config from appsettings and connect to DB
 var config = new ConfigurationBuilder()
     .SetBasePath(builder.Environment.ContentRootPath)
-    .AddJsonFile("appsettings.json")
+    .AddEnvironmentVariables()
     .Build();
-var connectionString = config.GetConnectionString("MongoDBConnection");
+
 builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionString));
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// add Controllers and Services
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IUser, User>();
@@ -30,7 +41,6 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

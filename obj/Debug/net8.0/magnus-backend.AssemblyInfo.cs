@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("magnus-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+659e784dd0b3514054e104fef42289e225e724ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb5f802d6cc27a0e86410b3d496cdb6f3d5c61bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("magnus-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("magnus-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

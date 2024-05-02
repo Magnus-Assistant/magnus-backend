@@ -7,7 +7,10 @@
     <RootNamespace>magnus_backend</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
+    <ItemGroup>
+      <Content Include=".env">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
     <PackageReference Include="MongoDB.Driver" Version="2.25.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
