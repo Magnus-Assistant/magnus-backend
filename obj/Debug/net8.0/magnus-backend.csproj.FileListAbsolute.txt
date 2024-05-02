@@ -31,3 +31,17 @@
 /Users/parkerc/Documents/GitHub/magnus-backend/obj/Debug/net8.0/magnus-backend.pdb
 /Users/parkerc/Documents/GitHub/magnus-backend/obj/Debug/net8.0/magnus-backend.genruntimeconfig.cache
 /Users/parkerc/Documents/GitHub/magnus-backend/obj/Debug/net8.0/ref/magnus-backend.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/AWSSDK.Core.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/AWSSDK.SecurityToken.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/DnsClient.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/MongoDB.Bson.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/MongoDB.Driver.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/MongoDB.Driver.Core.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/MongoDB.Libmongocrypt.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/SharpCompress.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/Snappier.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/ZstdSharp.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/runtimes/linux/native/libmongocrypt.so
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/runtimes/osx/native/libmongocrypt.dylib
+/Users/parkerc/Documents/GitHub/magnus-backend/bin/Debug/net8.0/runtimes/win/native/mongocrypt.dll
+/Users/parkerc/Documents/GitHub/magnus-backend/obj/Debug/net8.0/magnus-backend.sourcelink.json
