@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "oIk+8uu1DZ9uzqfPPQ0fGaU8pizxcD46nVd9kNY2YZg=",
+  "Source": "magnus-backend",
+  "BasePath": "_content/magnus-backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
