@@ -32,4 +32,19 @@ public class UserController(IUser user, IMongoClient mongoClient) : ControllerBa
 
         return Ok(user);
     }
+
+    [HttpGet]
+    public ActionResult<UserModel> GetAllUsers()
+    {
+        var database = _mongoClient.GetDatabase("Magnus");
+        var collection = database.GetCollection<UserModel>("users");
+
+        var users = collection.Find(_ => true).ToList();
+        if (users.Count == 0)
+        {
+            return NotFound(new { Message = $"No users found"});
+        }
+
+        return Ok(users);
+    }
 }
