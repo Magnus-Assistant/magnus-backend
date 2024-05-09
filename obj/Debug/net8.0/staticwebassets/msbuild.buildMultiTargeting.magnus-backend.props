@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../build/magnus-backend.props" />
+  <Import Project="..\build\magnus-backend.props" />
 </Project>
