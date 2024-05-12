@@ -52,4 +52,7 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.Run();
