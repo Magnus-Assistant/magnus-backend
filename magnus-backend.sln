@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "magnus-backend", "magnus-backend.csproj", "{E76F6731-3B0A-4DA0-984B-A192C5AE4E43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "magnus-backend", "magnus-backend.csproj", "{1522F808-4432-4BD1-9FBE-708416EF77EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E76F6731-3B0A-4DA0-984B-A192C5AE4E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E76F6731-3B0A-4DA0-984B-A192C5AE4E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E76F6731-3B0A-4DA0-984B-A192C5AE4E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E76F6731-3B0A-4DA0-984B-A192C5AE4E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1522F808-4432-4BD1-9FBE-708416EF77EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1522F808-4432-4BD1-9FBE-708416EF77EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1522F808-4432-4BD1-9FBE-708416EF77EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1522F808-4432-4BD1-9FBE-708416EF77EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {89FCC037-5231-43B6-8EC2-BA3E83A674B9}
+		SolutionGuid = {B1BCD744-0994-4D71-B6E1-6B915CB6BF84}
 	EndGlobalSection
 EndGlobal

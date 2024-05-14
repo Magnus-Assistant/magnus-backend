@@ -1,4 +1,4 @@
-@magnus_backend_HostAddress = http://localhost:5211
+@magnus_backend_HostAddress = http://localhost:5035
 
 GET {{magnus_backend_HostAddress}}/weatherforecast/
 Accept: application/json

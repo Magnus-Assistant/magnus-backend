@@ -6,7 +6,7 @@ using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//attempt to load the .ENV file
+// load the .env file
 try
 {
     var path = Path.Combine(builder.Environment.ContentRootPath, ".env");
@@ -16,7 +16,6 @@ catch (Exception ex)
 {
     Console.WriteLine($"Error loading .env file: {ex.Message}");
 }
-
 var connectionString = Environment.GetEnvironmentVariable("DB_CONN_STRING");
 
 //load config from appsettings and connect to DB
@@ -27,27 +26,19 @@ var config = new ConfigurationBuilder()
 
 builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionString));
 
-// add Controllers and Services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IUser, User>();
-
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Magnus Backend", Version = "v1" });
-});
-
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Magnus Backend v1");
-    });
+    app.UseSwaggerUI();
 }
 
 app.MapControllers();
