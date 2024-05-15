@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\schre\\Projects\\magnus-backend\\magnus-backend.csproj": {}
+    "/Users/parkerc/Documents/GitHub/magnus-backend/magnus-backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\schre\\Projects\\magnus-backend\\magnus-backend.csproj": {
+    "/Users/parkerc/Documents/GitHub/magnus-backend/magnus-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\schre\\Projects\\magnus-backend\\magnus-backend.csproj",
+        "projectUniqueName": "/Users/parkerc/Documents/GitHub/magnus-backend/magnus-backend.csproj",
         "projectName": "magnus-backend",
-        "projectPath": "C:\\Users\\schre\\Projects\\magnus-backend\\magnus-backend.csproj",
-        "packagesPath": "C:\\Users\\schre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\schre\\Projects\\magnus-backend\\obj\\",
+        "projectPath": "/Users/parkerc/Documents/GitHub/magnus-backend/magnus-backend.csproj",
+        "packagesPath": "/Users/parkerc/.nuget/packages/",
+        "outputPath": "/Users/parkerc/Documents/GitHub/magnus-backend/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\schre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/parkerc/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +53,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.6.1, )"
             }
           },
           "imports": [
@@ -81,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

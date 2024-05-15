@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "llCoh5mUk6Ath9kbRAqO6/9ivdpYhWRv/Weh0Ju7koI=",
+  "Hash": "c7CrXEB6J/5fn2r5CK3isOdLOynyGjhE5v+A0ICcPsQ=",
   "Source": "magnus-backend",
   "BasePath": "_content/magnus-backend",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "magnus-backend\\wwwroot",
+      "Name": "magnus-backend/wwwroot",
       "Source": "magnus-backend",
-      "ContentRoot": "C:\\Users\\schre\\Projects\\magnus-backend\\wwwroot\\",
+      "ContentRoot": "/Users/parkerc/Documents/GitHub/magnus-backend/wwwroot/",
       "BasePath": "_content/magnus-backend",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\schre\\Projects\\magnus-backend\\wwwroot\\index.html",
+      "Identity": "/Users/parkerc/Documents/GitHub/magnus-backend/wwwroot/index.html",
       "SourceId": "magnus-backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\schre\\Projects\\magnus-backend\\wwwroot\\",
+      "ContentRoot": "/Users/parkerc/Documents/GitHub/magnus-backend/wwwroot/",
       "BasePath": "_content/magnus-backend",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -33,7 +33,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\index.html"
+      "OriginalItemSpec": "wwwroot/index.html"
     }
   ]
 }

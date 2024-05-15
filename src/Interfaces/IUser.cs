@@ -1,13 +1,14 @@
 using magnus_backend.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace magnus_backend.Interfaces;
 
 public interface IUser {
-    void AddUser(UserModel user);
+    IActionResult AddUser(UserModel user);
 
-    void DeleteUser(string user_id);
+    IActionResult DeleteUser(string userId);
 
-    void UpdateUser(string user_id, string new_username);
+    ActionResult<UserModel> GetUser(string userId);
 
-    IEnumerable<UserModel> GetAllUsers();
+    ActionResult<UserModel> GetAllUsers();
 }
