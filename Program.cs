@@ -3,6 +3,7 @@ using magnus_backend.Interfaces;
 using magnus_backend.Services;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 

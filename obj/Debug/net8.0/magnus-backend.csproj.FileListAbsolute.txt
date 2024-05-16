@@ -51,3 +51,11 @@ C:\Users\schre\Projects\magnus-backend\obj\Debug\net8.0\refint\magnus-backend.dl
 C:\Users\schre\Projects\magnus-backend\obj\Debug\net8.0\magnus-backend.pdb
 C:\Users\schre\Projects\magnus-backend\obj\Debug\net8.0\magnus-backend.genruntimeconfig.cache
 C:\Users\schre\Projects\magnus-backend\obj\Debug\net8.0\ref\magnus-backend.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\schre\Projects\magnus-backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
