@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace magnus_backend.Interfaces;
 
-public interface IUser {
+public interface IUser
+{
     IActionResult AddUser(UserModel user);
 
     IActionResult DeleteUser(string userId);
