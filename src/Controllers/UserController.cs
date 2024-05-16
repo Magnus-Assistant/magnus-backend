@@ -48,7 +48,7 @@ public class UserController(IMongoClient mongoClient) : ControllerBase, IUser
     }
 
     [HttpPost]
-    public IActionResult AddUser([FromBody] UserModel user)
+    public ActionResult AddUser([FromBody] UserModel user)
     {
 
         if (user == null)
@@ -92,7 +92,7 @@ public class UserController(IMongoClient mongoClient) : ControllerBase, IUser
     }
 
     [HttpDelete]
-    public IActionResult DeleteUser(string userId)
+    public ActionResult DeleteUser(string userId)
     {
         if (string.IsNullOrWhiteSpace(userId))
         {
