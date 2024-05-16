@@ -1,5 +1,4 @@
 using magnus_backend;
-using magnus_backend.Services;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 
@@ -28,7 +27,6 @@ builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionStri
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<User>();
 
 builder.Services.AddSwaggerGen(c =>
 {
