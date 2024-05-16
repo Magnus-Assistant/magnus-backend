@@ -12,6 +12,8 @@ public class UserController : ControllerBase, IUser
     private readonly IMongoClient _mongoClient;
     private readonly ILog _logger;
 
+    // inject and instance of the mongoClient and our custom logger 
+    // into the controller so that we can use it
     public UserController(IMongoClient mongoClient, ILog logger)
     {
         _mongoClient = mongoClient;

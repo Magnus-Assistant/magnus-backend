@@ -1,16 +1,17 @@
 using magnus_backend.Enums;
 using magnus_backend.Interfaces;
 using magnus_backend.Models;
-using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
-namespace magnus_backend.Controllers;
-
-[Controller]
-public class LogController(IMongoClient mongoClient) : ControllerBase, ILog
+namespace magnus_backend.Services;
+/*
+    Logging service that is used just for the Web App.
+    Not accessible via an API
+*/
+public class LoggingService(IMongoClient mongoClient): ILog
 {
     private readonly IMongoClient _mongoClient = mongoClient;
-
+    
     public void Log(string message, LogLevels loglevel, string? source = null)
     {
         if (string.IsNullOrWhiteSpace(message))
@@ -20,7 +21,8 @@ public class LogController(IMongoClient mongoClient) : ControllerBase, ILog
         }
 
         var database = _mongoClient.GetDatabase("Magnus");
-        var collection = database.GetCollection<LogModel>("backend_logs");
+        // if it doesn't exit it will create it
+        var collection = database.GetCollection<LogModel>("logs");
 
         var log = new LogModel
         {
