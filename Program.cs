@@ -4,6 +4,8 @@ using magnus_backend.Services;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,17 @@ var config = new ConfigurationBuilder()
 
 builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionString));
 
+// from auth0 -> APIs -> Quickstart example:
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options => 
+{
+    options.Authority = Environment.GetEnvironmentVariable("JWT_AUTHORITY");
+    options.Audience = Environment.GetEnvironmentVariable("JWT_AUDIENCE");
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
@@ -41,6 +54,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// from auth0 -> APIs -> Quickstart example:
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

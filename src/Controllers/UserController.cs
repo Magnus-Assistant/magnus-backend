@@ -2,11 +2,13 @@ using magnus_backend.Interfaces;
 using magnus_backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using Microsoft.AspNetCore.Authorization;
 
 //"Url": "http://192.168.1.29:5000" ADD BACK TO APPSETTINGS
 
 namespace magnus_backend.Controllers;
 
+[Authorize]
 [Route("api/user")]
 [ApiController]
 public class UserController(IUser user, IMongoClient mongoClient) : ControllerBase
