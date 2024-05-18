@@ -1,10 +1,12 @@
 using magnus_backend.Interfaces;
 using magnus_backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
 namespace magnus_backend.Controllers;
 
+[Authorize]
 [Route("api/user")]
 [ApiController]
 public class UserController : ControllerBase, IUser

@@ -1,6 +1,7 @@
 using magnus_backend.Enums;
 using magnus_backend.Interfaces;
 using magnus_backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
@@ -9,6 +10,7 @@ namespace magnus_backend.Controllers;
 /*
     Houses APIs for creating logs on Magnus
 */
+[Authorize]
 [Route("api/log")]
 [ApiController]
 public class LoggingController(IMongoClient mongoClient) : ControllerBase, IMagnusLog
