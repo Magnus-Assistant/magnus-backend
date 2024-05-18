@@ -1,11 +1,9 @@
 using magnus_backend;
 using magnus_backend.Interfaces;
 using magnus_backend.Services;
-using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +23,7 @@ var connectionString = Environment.GetEnvironmentVariable("DB_CONN_STRING");
 var config = new ConfigurationBuilder()
     .SetBasePath(builder.Environment.ContentRootPath)
     .AddEnvironmentVariables()
+    .AddJsonFile("appsettings.json")
     .Build();
 
 builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionString));
@@ -39,6 +38,10 @@ builder.Services.AddAuthentication(options =>
     options.Authority = Environment.GetEnvironmentVariable("JWT_AUTHORITY");
     options.Audience = Environment.GetEnvironmentVariable("JWT_AUDIENCE");
 });
+
+builder.Services.AddAuthentication().AddJwtBearer();
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
