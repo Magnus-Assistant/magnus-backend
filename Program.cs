@@ -1,6 +1,7 @@
 using magnus_backend;
 using magnus_backend.Controllers;
 using magnus_backend.Interfaces;
+using magnus_backend.Services;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 
@@ -24,8 +25,10 @@ var config = new ConfigurationBuilder()
     .AddEnvironmentVariables()
     .Build();
 
+// we only want one instance of these to live at a time
 builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionString));
-builder.Services.AddSingleton<ILog, LogController>();
+builder.Services.AddSingleton<IMagnusLog, LoggingController>();
+builder.Services.AddSingleton<ILog, LoggingService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
