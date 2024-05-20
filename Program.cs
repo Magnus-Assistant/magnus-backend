@@ -1,4 +1,6 @@
 using magnus_backend;
+using magnus_backend.Controllers;
+using magnus_backend.Interfaces;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 
@@ -23,6 +25,7 @@ var config = new ConfigurationBuilder()
     .Build();
 
 builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionString));
+builder.Services.AddSingleton<ILog, LogController>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
