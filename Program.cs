@@ -30,19 +30,22 @@ var config = new ConfigurationBuilder()
 builder.Services.AddSingleton<IMongoClient, MongoClient>(sp => new MongoClient(connectionString));
 
 // add one instance of the Magnus database that we can use in our services
-builder.Services.AddScoped(sp => {
+builder.Services.AddScoped(sp =>
+{
     var client = sp.GetRequiredService<IMongoClient>();
     return client.GetDatabase("Magnus");
 });
 
 // add one instance of the users collection that we can use in our services
-builder.Services.AddScoped(sp => {
+builder.Services.AddScoped(sp =>
+{
     var database = sp.GetRequiredService<IMongoDatabase>();
     return database.GetCollection<UserModel>("users");
 });
 
 // add one instance of the logs collection that we can use in our services
-builder.Services.AddScoped(sp => {
+builder.Services.AddScoped(sp =>
+{
     var database = sp.GetRequiredService<IMongoDatabase>();
     return database.GetCollection<MagnusLogModel>("logs");
 });
