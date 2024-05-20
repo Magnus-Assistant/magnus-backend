@@ -42,7 +42,7 @@ builder.Services.AddScoped(sp => {
     return database.GetCollection<UserModel>("users");
 });
 
-// add one instance of the users collection that we can use in our services
+// add one instance of the logs collection that we can use in our services
 builder.Services.AddScoped(sp => {
     var database = sp.GetRequiredService<IMongoDatabase>();
     return database.GetCollection<MagnusLogModel>("logs");
@@ -52,7 +52,6 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<LoggingService>();
 builder.Services.AddScoped<MagnusLogService>();
 
-// builder.Services.AddSingleton<IMagnusLog, LoggingController>();
 builder.Services.AddSingleton<ILog, LoggingService>();
 
 builder.Services.AddEndpointsApiExplorer();
