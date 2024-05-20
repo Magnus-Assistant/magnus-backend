@@ -1,11 +1,12 @@
 using magnus_backend.Interfaces;
 using magnus_backend.Models;
 using magnus_backend.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace magnus_backend.Controllers;
 
-//[Authorize]
+[Authorize]
 [Route("api/user")]
 [ApiController]
 public class UserController : ControllerBase
