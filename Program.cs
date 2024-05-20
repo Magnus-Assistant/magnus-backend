@@ -1,5 +1,4 @@
 using magnus_backend;
-using magnus_backend.Controllers;
 using magnus_backend.Interfaces;
 using magnus_backend.Models;
 using magnus_backend.Services;
