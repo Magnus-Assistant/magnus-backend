@@ -1,6 +1,4 @@
 using magnus_backend;
-using magnus_backend.Interfaces;
-using magnus_backend.Services;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 
@@ -29,16 +27,23 @@ builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(connectionStri
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<IUser, User>();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Magnus Backend", Version = "v1" });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+var isProd = Environment.GetEnvironmentVariable("IS_PROD");
+if (isProd == "false")
 {
+    Console.WriteLine("WE ARE IN DEVELOPMENT!");
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Magnus Backend");
+    });
 }
 
 app.MapControllers();
